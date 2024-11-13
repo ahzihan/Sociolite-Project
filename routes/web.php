@@ -9,8 +9,8 @@ Route::get('/', function () {
 });
 
 Route::controller(SocialiteController::class)->group(function () {
-    Route::get('auth/auth.redirection', 'loginWithGoogle')->name('auth.google');
-    Route::get('auth/google-callback', 'socialAuthentication')->name('auth.google-callback');
+    Route::get('auth/redirection/{provider}', 'SocialLogin')->name('auth.redirection');
+    Route::get('auth/{provider}/callback', 'socialAuthentication')->name('auth.callback');
 });
 
 Route::get('/dashboard', function () {
