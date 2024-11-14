@@ -25,9 +25,8 @@ class SocialiteController extends Controller
             if ($provider) {
 
                 $socialUser = Socialite::driver($provider)->user();
-
                 $user = User::where('auth_provider_id', $socialUser->id)->first();
-
+                // dd($socialUser);
                 if ($user) {
                     Auth::login($user);
                 } else {

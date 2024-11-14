@@ -60,6 +60,10 @@
             {{-- Login With Github --}}
             <a href="{{ route('auth.redirection', 'github') }}"
                 class="px-5 py-2 text-white bg-red-600 rounded-lg shadow-lg">GitHub</a>
+
+            {{-- Login With LinkedIn --}}
+            <a href="{{ route('auth.redirection', 'linkedin-openid') }}"
+                class="px-5 py-2 text-white bg-blue-600 rounded-lg shadow-lg">LinkedIn</a>
         </div>
     </form>
 </x-guest-layout>
