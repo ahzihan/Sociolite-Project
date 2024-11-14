@@ -44,11 +44,22 @@
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
+
+        {{-- Social Login --}}
         <div class="flex items-center justify-between mt-4">
+
+            {{-- Login With Google --}}
             <a href="{{ route('auth.redirection', 'google') }}"
                 class="px-5 py-2 text-white bg-red-600 rounded-lg shadow-lg">Google</a>
+
+            {{-- Login With Facebook --}}
             <a href="{{ route('auth.redirection', 'facebook') }}"
                 class="px-5 py-2 text-white bg-blue-600 rounded-lg shadow-lg">Facebook</a>
+
+
+            {{-- Login With Github --}}
+            <a href="{{ route('auth.redirection', 'github') }}"
+                class="px-5 py-2 text-white bg-red-600 rounded-lg shadow-lg">GitHub</a>
         </div>
     </form>
 </x-guest-layout>
