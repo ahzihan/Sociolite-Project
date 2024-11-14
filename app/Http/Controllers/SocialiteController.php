@@ -20,6 +20,7 @@ class SocialiteController extends Controller
 
     public function socialAuthentication($provider)
     {
+
         try {
             if ($provider) {
                 $socialUser = Socialite::driver($provider)->user();
